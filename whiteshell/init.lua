@@ -80,3 +80,5 @@ end
 
 
 minetest.register_alias("clams:whiteshell","whiteshell:whiteshell")
+
+print("[Mod] Sea Loaded.")

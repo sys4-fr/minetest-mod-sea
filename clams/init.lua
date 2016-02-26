@@ -80,9 +80,9 @@ minetest.register_entity("clams:whiteshell", {
 	phase = 0,
 	phasetimer = 0,
 
-	on_activate = function(self, staticdata)
-		minetest.log("whiteshell activated!")
-	end,
+	-- on_activate = function(self, staticdata)
+	-- 	minetest.log("whiteshell activated!")
+	-- end,
 
 	on_step = function(self, dtime)
 		self.phasetimer = self.phasetimer + dtime

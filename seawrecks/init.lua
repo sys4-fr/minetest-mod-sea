@@ -32,7 +32,9 @@ minetest.register_node("seawrecks:woodshipchest", {
 		meta:set_string("formspec",
 			"size[8,9]"..
 			"list[current_name;main;0,0;8,4;]"..
-			"list[current_player;main;0,5;8,4;]")
+			"list[current_player;main;0,5;8,4;]" ..
+			"listring[current_name;main]" ..
+			"listring[current_player;main]")
 		meta:set_string("infotext", "Woodship chest")
 		local inv = meta:get_inventory()
 		inv:set_size("main", 8*4)
@@ -41,7 +43,9 @@ meta:from_table({
 	main = {[1] = "default:tree 99", [2] = "default:jungletree 99", [3] = "default:wood 99", [4] = "default:junglewood 99", [5] = "default:sapling 99", [6] = "default:junglesapling 99", [7] = "default:grass_1 99", [8] = "default:junglegrass 99", [32] = ""}
 	},
 	fields = {
-	formspec = "size[8,9;]list[context;main;0,0;8,4;]list[current_player;main;0,5;8,4;]",
+	formspec = "size[8,9;]list[context;main;0,0;8,4;]list[current_player;main;0,5;8,4;]" ..
+			"listring[context;main]" ..
+			"listring[current_player;main]",
 	infotext = "Normal chest"
 	}
 })
@@ -80,7 +84,9 @@ minetest.register_node("seawrecks:ubootchest", {
 		meta:set_string("formspec",
 			"size[8,9]"..
 			"list[current_name;main;0,0;8,4;]"..
-			"list[current_player;main;0,5;8,4;]")
+			"list[current_player;main;0,5;8,4;]" ..
+			"listring[current_name;main]" ..
+			"listring[current_player;main]")
 		meta:set_string("infotext", "U-boot chest")
 		local inv = meta:get_inventory()
 		inv:set_size("main", 8*4)
@@ -89,7 +95,9 @@ meta:from_table({
 	main = {[1] = "default:gold_ingot 99", [2] = "default:mese_crystal 99", [3] = "default:diamond 99", [32] = ""}
 	},
 	fields = {
-	formspec = "size[8,9;]list[context;main;0,0;8,4;]list[current_player;main;0,5;8,4;]",
+	formspec = "size[8,9;]list[context;main;0,0;8,4;]list[current_player;main;0,5;8,4;]" ..
+			"listring[context;main]" ..
+			"listring[current_player;main]",
 	infotext = "Normal chest"
 	}
 })
