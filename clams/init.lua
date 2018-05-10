@@ -9,7 +9,7 @@ minetest.register_node("clams:sandalgae", {
 	drop = {
 		items = {
 			{
-				items = {'"clams:collectedalgae" 4'},
+				items = {"clams:collectedalgae 4"},
 			},
 			{
 				items = {'clams:sandalgaeused'},
@@ -28,7 +28,7 @@ minetest.register_node("clams:dirtalgae", {
 	drop = {
 		items = {
 			{
-				items = {'"clams:collectedalgae" 4'},
+				items = {"clams:collectedalgae 4"},
 			},
 			{
 				items = {'clams:dirtalgaeused'},
