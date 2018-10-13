@@ -160,7 +160,6 @@ minetest.register_node("seaglass:seaglassoff_black", {
 
 -- STAIRS
 
-
 stairsshine.register_stair_and_slab("seaglass", "seaglass:seaglass",
 		{snappy=2,cracky=3,oddly_breakable_by_hand=3, nocolor=1, shine=1, not_in_creative_inventory=1},
 		{"seaglass_seaglass.png"},
