@@ -43,7 +43,7 @@ minetest.register_ore({
 	ore_type       = "scatter",
 	ore            = "seawrecks:woodship",
 	wherein        = "default:sand",
-	clust_scarcity = 30*30*30,
+	clust_scarcity = 40*40*40,
 	clust_num_ores = 1,
 	clust_size     = 12,
 	y_max     = -4,
@@ -54,7 +54,7 @@ minetest.register_ore({
 	ore_type       = "scatter",
 	ore            = "seawrecks:uboot",
 	wherein        = "default:sand",
-	clust_scarcity = 40*40*40,
+	clust_scarcity = 50*50*50,
 	clust_num_ores = 1,
 	clust_size     = 12,
 	y_max     = -10,
@@ -272,7 +272,7 @@ local yp = {x = pos.x, y = pos.y + 3, z = pos.z}
 		pos.y = pos.y - 7
 		pos.z = pos.z + 1
 		pos.x = pos.x - 2
-		--minetest.add_node(pos, {name = "seawrecks:woodshipchest"})
+
 		minetest.add_node(pos, {name = "default:chest"})
 		fill_chest(pos, 0, 3)
 
@@ -841,7 +841,7 @@ local yp = {x = pos.x, y = pos.y + 8, z = pos.z}
 		pos.y = pos.y - 7
 		pos.x = pos.x +16
 		pos.z = pos.z +3
-		--minetest.add_node(pos, {name = "seawrecks:ubootchest"})
+
 		minetest.add_node(pos, {name = "default:chest"})
 		fill_chest(pos, 7, 10)
 
