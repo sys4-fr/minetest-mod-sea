@@ -9,7 +9,7 @@ local function fill_chest(pos, min_pre, max_pre)
 		inv:set_size("main", 32)
 		local stacks = {}
 		if minetest.get_modpath("treasurer") ~= nil then
-			stacks = treasurer.select_random_treasures(8, min_pre, max_pre, {"weapons", "armor"})
+			stacks = treasurer.select_random_treasures(8, min_pre, max_pre, {"armes", "armures", "outils", "bonus", "carburant", "precieux"})
 		end -- TODO else if no treasurer
 		for s=1,#stacks do
 			if not inv:contains_item("main", stacks[s]) then
@@ -274,7 +274,7 @@ local yp = {x = pos.x, y = pos.y + 3, z = pos.z}
 		pos.x = pos.x - 2
 
 		minetest.add_node(pos, {name = "default:chest"})
-		fill_chest(pos, 0, 3)
+		fill_chest(pos, 1, 4)
 
 	else
 		return
@@ -843,7 +843,7 @@ local yp = {x = pos.x, y = pos.y + 8, z = pos.z}
 		pos.z = pos.z +3
 
 		minetest.add_node(pos, {name = "default:chest"})
-		fill_chest(pos, 7, 10)
+		fill_chest(pos, 1, 10)
 
 	else
 		return
