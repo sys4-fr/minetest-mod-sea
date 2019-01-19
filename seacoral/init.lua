@@ -648,3 +648,5 @@ minetest.register_alias("seadye:lime","dye:lime")
 minetest.register_alias("seadye:aqua","dye:aqua")
 minetest.register_alias("seadye:skyblue","dye:skyblue")
 minetest.register_alias("seadye:redviolet","dye:redviolet")
+
+minetest.log("action", "[sea - seacoral] loaded.")

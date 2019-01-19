@@ -147,3 +147,5 @@ register_blockbrick_craft("seastonebrick:seastonebrick_lime", {{'seastone:seasto
 register_blockbrick_craft("seastonebrick:seastonebrick_aqua", {{'seastone:seastone_aqua', 'seastone:seastone_aqua'}, {'seastone:seastone_aqua', 'seastone:seastone_aqua'}})
 register_blockbrick_craft("seastonebrick:seastonebrick_skyblue", {{'seastone:seastone_skyblue', 'seastone:seastone_skyblue'}, {'seastone:seastone_skyblue', 'seastone:seastone_skyblue'}})
 register_blockbrick_craft("seastonebrick:seastonebrick_redviolet", {{'seastone:seastone_redviolet', 'seastone:seastone_redviolet'}, {'seastone:seastone_redviolet', 'seastone:seastone_redviolet'}})
+
+minetest.log("action", "[sea - seastonebrick] loaded.")

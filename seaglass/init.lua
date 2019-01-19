@@ -738,3 +738,5 @@ minetest.register_alias("clams:redlightglass","seaglass:seaglassoff_red")
 minetest.register_alias("clams:bluelightglass","seaglass:seaglassoff_blue")
 minetest.register_alias("clams:whitelightglass","seaglass:seaglassoff_white")
 minetest.register_alias("clams:blacklightglass","seaglass:seaglassoff_black")
+
+minetest.log("action", "[sea - seaglass] loaded.")

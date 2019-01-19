@@ -537,3 +537,5 @@ minetest.register_alias("seaplants:chewstickbrown","seaplants:kelpbrown")
 minetest.register_alias("seaplants:leavysnackgreen","seaplants:seagrassgreen")
 minetest.register_alias("seaplants:leavysnackblue","seaplants:seagrassred")
 minetest.register_alias("seaplants:seasalad","seaplants:seasaladmix")
+
+minetest.log("action", "[sea - seaplants] loaded.")

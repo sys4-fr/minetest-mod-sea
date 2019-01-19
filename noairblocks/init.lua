@@ -228,3 +228,5 @@ local pos1 = {x=pos.x+1,y=pos.y+1,z=pos.z+1}
 	end
 end,
 })
+
+minetest.log("action", "[sea - noairblocks] loaded.")

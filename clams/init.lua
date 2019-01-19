@@ -390,3 +390,5 @@ minetest.register_alias("shells_dye:redlightglass","clams:redlightglass")
 minetest.register_alias("shells_dye:bluelightglass","clams:bluelightglass")
 minetest.register_alias("shells_dye:whitelightglass","clams:whitelightglass")
 minetest.register_alias("shells_dye:blacklightglass","clams:blacklightglass")
+
+minetest.log("action", "[sea - clams] loaded.")

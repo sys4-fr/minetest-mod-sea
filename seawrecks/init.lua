@@ -850,3 +850,5 @@ local yp = {x = pos.x, y = pos.y + 8, z = pos.z}
 	end
 end
 })
+
+minetest.log("action", "[sea - seawrecks] loaded.")

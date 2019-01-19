@@ -181,3 +181,5 @@ register_smoothblock_cooking("seastone:seastone_lime", "seacobble:seacobble_lime
 register_smoothblock_cooking("seastone:seastone_aqua", "seacobble:seacobble_aqua")
 register_smoothblock_cooking("seastone:seastone_skyblue", "seacobble:seacobble_skyblue")
 register_smoothblock_cooking("seastone:seastone_redviolet", "seacobble:seacobble_redviolet")
+
+minetest.log("action", "[sea - seastone] loaded.")

@@ -155,3 +155,5 @@ register_seacobble_craft("seacobble:seacobble_lime", {'clams:crushedwhite', 'def
 register_seacobble_craft("seacobble:seacobble_aqua", {'clams:crushedwhite', 'default:cobble','dye:aqua'})
 register_seacobble_craft("seacobble:seacobble_skyblue", {'clams:crushedwhite', 'default:cobble','dye:skyblue'})
 register_seacobble_craft("seacobble:seacobble_redviolet", {'clams:crushedwhite', 'default:cobble','dye:redviolet'})
+
+minetest.log("action", "[sea - seacobble] loaded.")

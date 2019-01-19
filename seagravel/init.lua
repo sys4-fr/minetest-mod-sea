@@ -197,3 +197,5 @@ register_seagravel_craft("seagravel:seagravel_lime", {'clams:crushedwhite', 'def
 register_seagravel_craft("seagravel:seagravel_aqua", {'clams:crushedwhite', 'default:gravel','dye:aqua'})
 register_seagravel_craft("seagravel:seagravel_skyblue", {'clams:crushedwhite', 'default:gravel','dye:skyblue'})
 register_seagravel_craft("seagravel:seagravel_redviolet", {'clams:crushedwhite', 'default:gravel','dye:redviolet'})
+
+minetest.log("action", "[sea - seagravel] loaded.")
