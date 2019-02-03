@@ -851,6 +851,6 @@ local yp = {x = pos.x, y = pos.y + 8, z = pos.z}
 end
 })
 
-minetest.register_alias("seawrecks:woodchipchest", "default:chest")
+minetest.register_alias("seawrecks:woodshipchest", "default:chest")
 
 minetest.log("action", "[sea - seawrecks] loaded.")
