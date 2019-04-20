@@ -1,9 +1,7 @@
 -- NODES
 
 -- Add magenta, aqua, skyblue seacorals
-local colors = {magenta = "Magenta", aqua = "Aqua", skyblue = "Skyblue"}
-
-for color, cname in pairs(colors) do
+for color, cname in pairs({magenta = "Magenta", aqua = "Aqua", skyblue = "Skyblue"}) do
 	minetest.register_node(
 		"seacoral:coral_"..color, {
 			description = cname.." Coral",
@@ -62,6 +60,11 @@ for color, cname in pairs(colors) do
 				minetest.set_node(pos, {name = "default:coral_skeleton"})
 			end,
 })
+
+	-- Replace Old seacorals with new defined ones
+	minetest.register_alias("seacoral:coral"..color, "default:water_source")
+	minetest.register_alias("seacoral:seacoralsand"..color, "seacoral:coral_"..color)
+	minetest.register_alias("seacoral:seacoraldirt"..color, "seacoral:coral_"..color)
 end
 
 -- Replace cyan, redviolet, lime seacorals with default Minetest's ones
@@ -79,19 +82,6 @@ minetest.register_alias("seacoral:corallime", "default:water_source")
 minetest.register_alias("seacoral:seacoralsandlime", "default:coral_green")
 minetest.register_alias("seacoral:seacoraldirtlime", "default:coral_green")
 nalc.add_group("default:coral_green", "seacoral", 1)
-
--- Replace Old magenta, aqua, skyblue seacorals with new defined ones
-minetest.register_alias("seacoral:coralmagenta", "default:water_source")
-minetest.register_alias("seacoral:seacoralsandmagenta", "seacoral:coral_magenta")
-minetest.register_alias("seacoral:seacoraldirtmagenta", "seacoral:coral_magenta")
-
-minetest.register_alias("seacoral:coralaqua", "default:water_source")
-minetest.register_alias("seacoral:seacoralsandaqua", "seacoral:coral_aqua")
-minetest.register_alias("seacoral:seacoraldirtaqua", "seacoral:coral_aqua")
-
-minetest.register_alias("seacoral:coralskyblue", "default:water_source")
-minetest.register_alias("seacoral:seacoralsandskyblue", "seacoral:coral_skyblue")
-minetest.register_alias("seacoral:seacoraldirtskyblue", "seacoral:coral_skyblue")
 
 -- CRAFTING
 
@@ -144,6 +134,8 @@ minetest.register_decoration(
 			"seacoral:coral_magenta", "default:coral_orange",
 			"seacoral:coral_aqua", "default:coral_brown",
 			"seacoral:coral_skyblue", "default:coral_skeleton",
+			"default:coral_green", "default:coral_pink",
+			"default:coral_cyan"
 		},
 	})
 
