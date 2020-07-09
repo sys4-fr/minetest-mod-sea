@@ -1,3 +1,6 @@
+local sand_sounds = minetest.registered_nodes["default:sand"].sounds
+local dirt_sounds = minetest.registered_nodes["default:dirt"].sounds
+
 -- NODES
 
 minetest.register_node("clams:sandalgae", {
@@ -16,7 +19,7 @@ minetest.register_node("clams:sandalgae", {
 			}
 		}
 	},
-	sounds = default.node_sound_sand_defaults(),
+	sounds = sand_sounds,
 })
 
 minetest.register_node("clams:dirtalgae", {
@@ -35,7 +38,7 @@ minetest.register_node("clams:dirtalgae", {
 			}
 		}
 	},
-	sounds = default.node_sound_dirt_defaults,	
+	sounds = dirt_sounds,
 })
 
 minetest.register_node("clams:sandalgaeused", {
@@ -44,7 +47,7 @@ minetest.register_node("clams:sandalgaeused", {
 	inventory_image = {"default_sand.png^clams_algaeused.png"},
 	is_ground_content = true,
 	groups = {crumbly=3, falling_node=1, sand=1},
-	sounds = default.node_sound_sand_defaults(),
+	sounds = sand_sounds,
 })
 
 minetest.register_node("clams:dirtalgaeused", {
@@ -53,7 +56,7 @@ minetest.register_node("clams:dirtalgaeused", {
 	inventory_image = {"default_dirt.png^clams_algaeused.png"},
 	is_ground_content = true,
 	groups = {crumbly=3},
-	sounds = default.node_sound_dirt_defaults(),
+	sounds = dirt_sounds,
 })
 
 
