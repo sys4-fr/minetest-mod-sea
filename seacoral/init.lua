@@ -104,8 +104,8 @@ add_group("default:coral_green", "seacoral", 1)
 
 -- CRAFTING
 
-if( minetest.get_modpath( "colormachine") == nil ) then
-	register_seacoral_craft = function(output,recipe)
+if not minetest.get_modpath( "colormachine") then
+	local register_seacoral_craft = function(output,recipe)
 		minetest.register_craft(
 			{
 				type = 'shapeless',
@@ -116,10 +116,13 @@ if( minetest.get_modpath( "colormachine") == nil ) then
 
 	register_seacoral_craft('dye:cyan 4', {'default:coral_cyan'})
 	register_seacoral_craft('dye:magenta 4', {'seacoral:coral_magenta'})
-	register_seacoral_craft('dye:lime 4', {'default:coral_green'})
-	register_seacoral_craft('dye:spring 4', {'seacoral:coral_aqua'})
-	register_seacoral_craft('dye:azure 4', {'seacoral:coral_skyblue'})
 	register_seacoral_craft('dye:pink 4', {'default:coral_pink'})
+
+	if minetest.get_modpath("unifieddyes") then
+		register_seacoral_craft('dye:lime 4', {'default:coral_green'})
+		register_seacoral_craft('dye:spring 4', {'seacoral:coral_aqua'})
+		register_seacoral_craft('dye:azure 4', {'seacoral:coral_skyblue'})
+	end
 end
 
 -- SEACORAL SAND AND DIRT GENERATION
@@ -186,7 +189,7 @@ minetest.register_abm(
 -- OPTIONAL DEPENDENCY
 
 
-if( minetest.get_modpath( "colormachine") ~= nil ) then
+if minetest.get_modpath( "colormachine") then
 	colormachine.basic_dye_sources  = { "flowers:rose", "flowers:tulip", "flowers:dandelion_yellow", "default:coral_green", "default:cactus", "seacoral:coral_aqua", "default::coral_cyan", "seacoral:coral_skyblue", "flowers:geranium", "flowers:viola", "seacoral:coral_magenta", "default:coral_pink", "default:stone", "", "", "", "default:coal_lump" };
 	else
 	return
