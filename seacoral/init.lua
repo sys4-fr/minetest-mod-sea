@@ -1,3 +1,22 @@
+local function add_group(name, group, value)
+	local node = minetest.registered_nodes[name]
+
+	if node then
+		local groups = node.groups
+		if not groups then
+			groups = {}
+		end
+		groups[group] = value
+
+		minetest.log("action", "[seacoral] Add group "..group.."="..value.." to "..name)
+		minetest.override_item(name, {groups = groups})
+	end
+end
+
+if minetest.get_modpath("nalc_lib") then
+	add_group = nalc.add_group
+end
+
 -- NODES
 
 -- Add magenta, aqua, skyblue seacorals
@@ -71,17 +90,17 @@ end
 minetest.register_alias("seacoral:coralcyan", "default:water_source")
 minetest.register_alias("seacoral:seacoralsandcyan", "default:coral_cyan")
 minetest.register_alias("seacoral:seacoraldirtcyan", "default:coral_cyan")
-nalc.add_group("default:coral_cyan", "seacoral", 1)
+add_group("default:coral_cyan", "seacoral", 1)
 
 minetest.register_alias("seacoral:coralredviolet", "default:water_source")
 minetest.register_alias("seacoral:seacoralsandredviolet", "default:coral_pink")
 minetest.register_alias("seacoral:seacoraldirtredviolet", "default:coral_pink")
-nalc.add_group("default:coral_pink", "seacoral", 1)
+add_group("default:coral_pink", "seacoral", 1)
 
 minetest.register_alias("seacoral:corallime", "default:water_source")
 minetest.register_alias("seacoral:seacoralsandlime", "default:coral_green")
 minetest.register_alias("seacoral:seacoraldirtlime", "default:coral_green")
-nalc.add_group("default:coral_green", "seacoral", 1)
+add_group("default:coral_green", "seacoral", 1)
 
 -- CRAFTING
 
