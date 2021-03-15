@@ -32,6 +32,7 @@ local function register_glass(suffix, color, cgroups)
 	 drawtype = "glasslike",
 	 tiles = {"seaglass_seaglass"..c..".png"},
 	 inventory_image = minetest.inventorycube("seaglass_seaglass"..c..".png"),
+	 use_texture_alpha = "clip",
 	 paramtype = "light",
 	 sunlight_propagates = true,
 	 light_source = ls,
