@@ -95,7 +95,7 @@ minetest.register_entity("clams:whiteshell", {
 			if self.phase >= 3 then
 				self.phase = 0
 			end
-			self.object:setsprite({x=0, y=self.phase})
+			self.object:set_sprite({x=0, y=self.phase})
 			local phasearmor = {
 				[0]={fleshy=0},
 				[1]={fleshy=30},
